@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Trains - RailBook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="dashboard.html" class="logo">
+                <div class="logo-icon">R</div>
+                RailBook
+            </a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="train-search.html" class="nav-link active">
+                        <span class="icon">🔍</span>
+                        <span>Book Ticket</span>
+                    </a></li>
+                    <li><a href="my-bookings.html" class="nav-link">
+                        <span class="icon">🎫</span>
+                        <span>My Bookings</span>
+                    </a></li>
+                </ul>
+                <a href="profile.html" class="profile-icon" title="My Profile">👤</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Search Trains</h1>
+                <p>Find and book trains between any two stations</p>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <form action="train-list.html" method="get">
+                    <div class="search-form">
+                        <div class="form-group">
+                            <label class="form-label" for="from-station">From Station</label>
+                            <select id="from-station" class="form-select" required>
+                                <option value="">Select departure station</option>
+                                <option value="NDLS">New Delhi (NDLS)</option>
+                                <option value="MMCT">Mumbai Central (MMCT)</option>
+                                <option value="HWH">Howrah Junction (HWH)</option>
+                                <option value="MAS">Chennai Central (MAS)</option>
+                                <option value="SBC">Bangalore City (SBC)</option>
+                                <option value="CSTM">Mumbai CST (CSTM)</option>
+                                <option value="BPL">Bhopal Junction (BPL)</option>
+                                <option value="JP">Jaipur Junction (JP)</option>
+                                <option value="LKO">Lucknow (LKO)</option>
+                                <option value="ADI">Ahmedabad (ADI)</option>
+                                <option value="PUNE">Pune Junction (PUNE)</option>
+                                <option value="HYB">Hyderabad (HYB)</option>
+                                <option value="BSB">Varanasi (BSB)</option>
+                                <option value="CNB">Kanpur Central (CNB)</option>
+                                <option value="AGC">Agra Cantt (AGC)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="to-station">To Station</label>
+                            <select id="to-station" class="form-select" required>
+                                <option value="">Select arrival station</option>
+                                <option value="NDLS">New Delhi (NDLS)</option>
+                                <option value="MMCT">Mumbai Central (MMCT)</option>
+                                <option value="HWH">Howrah Junction (HWH)</option>
+                                <option value="MAS">Chennai Central (MAS)</option>
+                                <option value="SBC">Bangalore City (SBC)</option>
+                                <option value="CSTM">Mumbai CST (CSTM)</option>
+                                <option value="BPL">Bhopal Junction (BPL)</option>
+                                <option value="JP">Jaipur Junction (JP)</option>
+                                <option value="LKO">Lucknow (LKO)</option>
+                                <option value="ADI">Ahmedabad (ADI)</option>
+                                <option value="PUNE">Pune Junction (PUNE)</option>
+                                <option value="HYB">Hyderabad (HYB)</option>
+                                <option value="BSB">Varanasi (BSB)</option>
+                                <option value="CNB">Kanpur Central (CNB)</option>
+                                <option value="AGC">Agra Cantt (AGC)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="travel-date">Travel Date</label>
+                            <input type="date" id="travel-date" class="form-input" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            🔍 Search Trains
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Popular Routes Section -->
+            <div style="margin-top: var(--spacing-3xl);">
+                <h3 style="margin-bottom: var(--spacing-lg);">Popular Routes</h3>
+                <div class="grid grid-4" style="gap: var(--spacing-lg);">
+                    <a href="train-list.html" class="card" style="padding: var(--spacing-lg); text-align: center; text-decoration: none;">
+                        <div style="font-size: 2rem; margin-bottom: var(--spacing-sm);">🚂</div>
+                        <h4 style="margin-bottom: var(--spacing-xs);">Delhi → Mumbai</h4>
+                        <p style="color: var(--gray-500); font-size: var(--font-size-sm); margin-bottom: 0;">15+ trains daily</p>
+                    </a>
+                    <a href="train-list.html" class="card" style="padding: var(--spacing-lg); text-align: center; text-decoration: none;">
+                        <div style="font-size: 2rem; margin-bottom: var(--spacing-sm);">🚂</div>
+                        <h4 style="margin-bottom: var(--spacing-xs);">Delhi → Kolkata</h4>
+                        <p style="color: var(--gray-500); font-size: var(--font-size-sm); margin-bottom: 0;">12+ trains daily</p>
+                    </a>
+                    <a href="train-list.html" class="card" style="padding: var(--spacing-lg); text-align: center; text-decoration: none;">
+                        <div style="font-size: 2rem; margin-bottom: var(--spacing-sm);">🚂</div>
+                        <h4 style="margin-bottom: var(--spacing-xs);">Mumbai → Bangalore</h4>
+                        <p style="color: var(--gray-500); font-size: var(--font-size-sm); margin-bottom: 0;">10+ trains daily</p>
+                    </a>
+                    <a href="train-list.html" class="card" style="padding: var(--spacing-lg); text-align: center; text-decoration: none;">
+                        <div style="font-size: 2rem; margin-bottom: var(--spacing-sm);">🚂</div>
+                        <h4 style="margin-bottom: var(--spacing-xs);">Chennai → Delhi</h4>
+                        <p style="color: var(--gray-500); font-size: var(--font-size-sm); margin-bottom: 0;">8+ trains daily</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Travel Tips Section -->
+            <div style="margin-top: var(--spacing-3xl);">
+                <h3 style="margin-bottom: var(--spacing-lg);">Travel Tips</h3>
+                <div class="grid grid-3" style="gap: var(--spacing-lg);">
+                    <div class="card" style="padding: var(--spacing-lg);">
+                        <div style="font-size: 2rem; margin-bottom: var(--spacing-md);">📅</div>
+                        <h4 style="margin-bottom: var(--spacing-sm);">Book in Advance</h4>
+                        <p style="color: var(--gray-500); font-size: var(--font-size-sm); margin-bottom: 0;">Book your tickets at least 2-3 weeks in advance for better seat availability and lower fares.</p>
+                    </div>
+                    <div class="card" style="padding: var(--spacing-lg);">
+                        <div style="font-size: 2rem; margin-bottom: var(--spacing-md);">🌙</div>
+                        <h4 style="margin-bottom: var(--spacing-sm);">Travel Off-Peak</h4>
+                        <p style="color: var(--gray-500); font-size: var(--font-size-sm); margin-bottom: 0;">Travel during weekdays or non-holiday periods to find more availability and better prices.</p>
+                    </div>
+                    <div class="card" style="padding: var(--spacing-lg);">
+                        <div style="font-size: 2rem; margin-bottom: var(--spacing-md);">💺</div>
+                        <h4 style="margin-bottom: var(--spacing-sm);">Choose Right Class</h4>
+                        <p style="color: var(--gray-500); font-size: var(--font-size-sm); margin-bottom: 0;">Select the travel class based on journey duration. AC classes are recommended for long trips.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RailBook</h4>
+                    <p>Your trusted partner for railway ticket booking. We make train travel simple and convenient.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="dashboard.html" class="footer-link">Dashboard</a>
+                        <a href="train-search.html" class="footer-link">Book Ticket</a>
+                        <a href="my-bookings.html" class="footer-link">My Bookings</a>
+                        <a href="profile.html" class="footer-link">Profile</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">FAQs</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span class="icon">📧</span>
+                            <span>support@railbook.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📞</span>
+                            <span>1800-XXX-XXXX</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📍</span>
+                            <span>New Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 RailBook. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

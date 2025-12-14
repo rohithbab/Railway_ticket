@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Details - RailBook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="dashboard.html" class="logo">
+                <div class="logo-icon">R</div>
+                RailBook
+            </a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="train-search.html" class="nav-link active">
+                        <span class="icon">🔍</span>
+                        <span>Book Ticket</span>
+                    </a></li>
+                    <li><a href="my-bookings.html" class="nav-link">
+                        <span class="icon">🎫</span>
+                        <span>My Bookings</span>
+                    </a></li>
+                </ul>
+                <a href="profile.html" class="profile-icon" title="My Profile">👤</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <a href="train-search.html" style="color: var(--gray-500);">Search</a>
+                <span style="color: var(--gray-400); margin: 0 var(--spacing-sm);">→</span>
+                <a href="train-list.html" style="color: var(--gray-500);">Train List</a>
+                <span style="color: var(--gray-400); margin: 0 var(--spacing-sm);">→</span>
+                <a href="train-details.html" style="color: var(--gray-500);">Train Details</a>
+                <span style="color: var(--gray-400); margin: 0 var(--spacing-sm);">→</span>
+                <span style="color: var(--gray-700);">Passenger Details</span>
+            </div>
+
+            <!-- Progress Steps -->
+            <div style="display: flex; justify-content: center; margin-bottom: var(--spacing-2xl);">
+                <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 32px; height: 32px; background-color: var(--success-color); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600;">✓</div>
+                        <span style="color: var(--success-color); font-weight: 500;">Select Train</span>
+                    </div>
+                    <div style="width: 60px; height: 2px; background-color: var(--success-color);"></div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 32px; height: 32px; background-color: var(--primary-color); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600;">2</div>
+                        <span style="color: var(--primary-color); font-weight: 500;">Passenger Details</span>
+                    </div>
+                    <div style="width: 60px; height: 2px; background-color: var(--gray-300);"></div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 32px; height: 32px; background-color: var(--gray-300); color: var(--gray-600); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600;">3</div>
+                        <span style="color: var(--gray-500);">Payment</span>
+                    </div>
+                    <div style="width: 60px; height: 2px; background-color: var(--gray-300);"></div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 32px; height: 32px; background-color: var(--gray-300); color: var(--gray-600); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600;">4</div>
+                        <span style="color: var(--gray-500);">Confirmation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-2xl);">
+                <!-- Left Column - Passenger Form -->
+                <div>
+                    <form action="payment.html" method="get">
+                        <!-- Passenger 1 -->
+                        <div class="card" style="margin-bottom: var(--spacing-xl);">
+                            <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                                <h3>Passenger 1 (Adult)</h3>
+                                <span class="badge badge-primary">Primary</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="name1">Full Name (as per ID)</label>
+                                        <input type="text" id="name1" class="form-input" placeholder="Enter full name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="age1">Age</label>
+                                        <input type="number" id="age1" class="form-input" placeholder="Enter age" min="1" max="120" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="gender1">Gender</label>
+                                        <select id="gender1" class="form-select" required>
+                                            <option value="">Select gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="berth1">Berth Preference</label>
+                                        <select id="berth1" class="form-select">
+                                            <option value="">No preference</option>
+                                            <option value="lower">Lower Berth</option>
+                                            <option value="middle">Middle Berth</option>
+                                            <option value="upper">Upper Berth</option>
+                                            <option value="side-lower">Side Lower</option>
+                                            <option value="side-upper">Side Upper</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <label class="form-label" for="id1">ID Card Type</label>
+                                    <select id="id1" class="form-select">
+                                        <option value="aadhar">Aadhar Card</option>
+                                        <option value="pan">PAN Card</option>
+                                        <option value="passport">Passport</option>
+                                        <option value="voter">Voter ID</option>
+                                        <option value="driving">Driving License</option>
+                                    </select>
+                                    <span class="form-hint">Carry this ID during the journey</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Passenger 2 -->
+                        <div class="card" style="margin-bottom: var(--spacing-xl);">
+                            <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                                <h3>Passenger 2 (Adult)</h3>
+                                <button type="button" class="btn btn-sm" style="background: none; color: var(--error-color); border: none; padding: 0;">Remove</button>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="name2">Full Name (as per ID)</label>
+                                        <input type="text" id="name2" class="form-input" placeholder="Enter full name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="age2">Age</label>
+                                        <input type="number" id="age2" class="form-input" placeholder="Enter age" min="1" max="120">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="gender2">Gender</label>
+                                        <select id="gender2" class="form-select">
+                                            <option value="">Select gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="berth2">Berth Preference</label>
+                                        <select id="berth2" class="form-select">
+                                            <option value="">No preference</option>
+                                            <option value="lower">Lower Berth</option>
+                                            <option value="middle">Middle Berth</option>
+                                            <option value="upper">Upper Berth</option>
+                                            <option value="side-lower">Side Lower</option>
+                                            <option value="side-upper">Side Upper</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add Passenger Button -->
+                        <button type="button" class="btn btn-secondary btn-block" style="margin-bottom: var(--spacing-xl);">
+                            + Add Another Passenger
+                        </button>
+
+                        <!-- Contact Details -->
+                        <div class="card" style="margin-bottom: var(--spacing-xl);">
+                            <div class="card-header">
+                                <h3>Contact Details</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="email">Email Address</label>
+                                        <input type="email" id="email" class="form-input" placeholder="Enter email" value="john.doe@email.com" required>
+                                        <span class="form-hint">Ticket will be sent to this email</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="phone">Mobile Number</label>
+                                        <input type="tel" id="phone" class="form-input" placeholder="Enter mobile number" value="+91 98765 43210" required>
+                                        <span class="form-hint">For booking updates via SMS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- GST Details (Optional) -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>GST Details (Optional)</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="form-label" for="gst">GST Number</label>
+                                        <input type="text" id="gst" class="form-input" placeholder="Enter GST number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="company">Company Name</label>
+                                        <input type="text" id="company" class="form-input" placeholder="Enter company name">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button (Mobile) -->
+                        <div style="display: none; margin-top: var(--spacing-xl);">
+                            <button type="submit" class="btn btn-primary btn-block btn-lg">Continue to Payment</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Right Column - Booking Summary -->
+                <div>
+                    <div class="card" style="position: sticky; top: 100px;">
+                        <div class="card-header">
+                            <h3>Booking Summary</h3>
+                        </div>
+                        <div class="card-body">
+                            <!-- Train Info -->
+                            <div style="padding-bottom: var(--spacing-md); border-bottom: 1px solid var(--gray-200); margin-bottom: var(--spacing-md);">
+                                <div style="font-weight: 600; font-size: var(--font-size-lg); margin-bottom: var(--spacing-xs);">Rajdhani Express</div>
+                                <div style="color: var(--gray-500); font-size: var(--font-size-sm);">#12301 | Dec 20, 2024</div>
+                            </div>
+
+                            <!-- Journey Info -->
+                            <div style="display: flex; align-items: center; gap: var(--spacing-md); padding-bottom: var(--spacing-md); border-bottom: 1px solid var(--gray-200); margin-bottom: var(--spacing-md);">
+                                <div>
+                                    <div style="font-weight: 600;">16:55</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">NDLS</div>
+                                </div>
+                                <div style="flex: 1; text-align: center;">
+                                    <div style="font-size: var(--font-size-xs); color: var(--gray-500);">15h 35m</div>
+                                    <div style="height: 2px; background-color: var(--gray-300); margin: var(--spacing-xs) 0;"></div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="font-weight: 600;">08:30</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">MMCT</div>
+                                </div>
+                            </div>
+
+                            <!-- Class & Passengers -->
+                            <div class="booking-summary" style="background-color: var(--white); padding: 0; margin-bottom: var(--spacing-md);">
+                                <div class="summary-row">
+                                    <span class="summary-label">Class</span>
+                                    <span class="summary-value">First AC (1A)</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Passengers</span>
+                                    <span class="summary-value">2 Adults</span>
+                                </div>
+                            </div>
+
+                            <!-- Fare Breakdown -->
+                            <div class="booking-summary">
+                                <div class="summary-row">
+                                    <span class="summary-label">Base Fare (x2)</span>
+                                    <span class="summary-value">₹9,000</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Reservation Charge</span>
+                                    <span class="summary-value">₹120</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Catering Charge</span>
+                                    <span class="summary-value">₹500</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">GST (5%)</span>
+                                    <span class="summary-value">₹80</span>
+                                </div>
+                                <div class="summary-row" style="font-size: var(--font-size-lg); color: var(--primary-color);">
+                                    <span class="summary-label">Total Amount</span>
+                                    <span class="summary-value">₹9,700</span>
+                                </div>
+                            </div>
+
+                            <a href="payment.html" class="btn btn-primary btn-block btn-lg" style="margin-top: var(--spacing-lg);">
+                                Continue to Payment
+                            </a>
+
+                            <p style="text-align: center; color: var(--gray-500); font-size: var(--font-size-xs); margin-top: var(--spacing-md); margin-bottom: 0;">
+                                By proceeding, you agree to our Terms & Conditions
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RailBook</h4>
+                    <p>Your trusted partner for railway ticket booking. We make train travel simple and convenient.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="dashboard.html" class="footer-link">Dashboard</a>
+                        <a href="train-search.html" class="footer-link">Book Ticket</a>
+                        <a href="my-bookings.html" class="footer-link">My Bookings</a>
+                        <a href="profile.html" class="footer-link">Profile</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">FAQs</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span class="icon">📧</span>
+                            <span>support@railbook.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📞</span>
+                            <span>1800-XXX-XXXX</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📍</span>
+                            <span>New Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 RailBook. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

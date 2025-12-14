@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Trains - RailBook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="dashboard.html" class="logo">
+                <div class="logo-icon">R</div>
+                RailBook
+            </a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="train-search.html" class="nav-link active">
+                        <span class="icon">🔍</span>
+                        <span>Book Ticket</span>
+                    </a></li>
+                    <li><a href="my-bookings.html" class="nav-link">
+                        <span class="icon">🎫</span>
+                        <span>My Bookings</span>
+                    </a></li>
+                </ul>
+                <a href="profile.html" class="profile-icon" title="My Profile">👤</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Search Summary -->
+            <div class="card" style="margin-bottom: var(--spacing-2xl);">
+                <div class="card-body">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-md);">
+                        <div style="display: flex; align-items: center; gap: var(--spacing-xl);">
+                            <div>
+                                <span style="font-size: var(--font-size-sm); color: var(--gray-500);">From</span>
+                                <div style="font-weight: 600; font-size: var(--font-size-lg);">New Delhi (NDLS)</div>
+                            </div>
+                            <div style="font-size: 1.5rem;">→</div>
+                            <div>
+                                <span style="font-size: var(--font-size-sm); color: var(--gray-500);">To</span>
+                                <div style="font-weight: 600; font-size: var(--font-size-lg);">Mumbai Central (MMCT)</div>
+                            </div>
+                            <div style="padding-left: var(--spacing-xl); border-left: 1px solid var(--gray-200);">
+                                <span style="font-size: var(--font-size-sm); color: var(--gray-500);">Date</span>
+                                <div style="font-weight: 600;">Dec 20, 2024</div>
+                            </div>
+                        </div>
+                        <a href="train-search.html" class="btn btn-secondary">Modify Search</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Header -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-lg);">
+                <div>
+                    <h2 style="margin-bottom: var(--spacing-xs);">Available Trains</h2>
+                    <p style="color: var(--gray-500); margin-bottom: 0;">6 trains found for your search</p>
+                </div>
+                <div style="display: flex; gap: var(--spacing-md);">
+                    <select class="form-select" style="width: auto;">
+                        <option>Sort by: Departure</option>
+                        <option>Sort by: Duration</option>
+                        <option>Sort by: Price (Low to High)</option>
+                        <option>Sort by: Price (High to Low)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Train Cards -->
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                <!-- Train 1 - Rajdhani Express -->
+                <div class="train-card">
+                    <div class="train-card-header">
+                        <div>
+                            <span class="train-name">Rajdhani Express</span>
+                            <span class="train-number" style="margin-left: var(--spacing-sm);">#12301</span>
+                        </div>
+                        <span class="badge badge-success">Runs Daily</span>
+                    </div>
+                    <div class="train-card-body">
+                        <div class="journey-info">
+                            <div class="station">
+                                <div class="station-time">16:55</div>
+                                <div class="station-name">New Delhi (NDLS)</div>
+                            </div>
+                            <div class="journey-line">
+                                <div class="journey-line-inner">
+                                    <span class="journey-duration">15h 35m</span>
+                                </div>
+                            </div>
+                            <div class="station">
+                                <div class="station-time">08:30</div>
+                                <div class="station-name">Mumbai Central (MMCT)</div>
+                            </div>
+                        </div>
+                        <div class="train-meta">
+                            <div class="seat-info">
+                                <div class="seat-class">
+                                    <div class="seat-class-name">1A</div>
+                                    <div class="seat-availability available">Available 12</div>
+                                </div>
+                                <div class="seat-class">
+                                    <div class="seat-class-name">2A</div>
+                                    <div class="seat-availability available">Available 45</div>
+                                </div>
+                                <div class="seat-class">
+                                    <div class="seat-class-name">3A</div>
+                                    <div class="seat-availability limited">RAC 5</div>
+                                </div>
+                            </div>
+                            <div class="train-fare">
+                                <div class="fare-label">Starting from</div>
+                                <div class="fare-amount">₹2,450</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: var(--spacing-lg); text-align: right;">
+                            <a href="train-details.html" class="btn btn-primary">View Details & Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Train 2 - August Kranti Rajdhani -->
+                <div class="train-card">
+                    <div class="train-card-header">
+                        <div>
+                            <span class="train-name">August Kranti Rajdhani</span>
+                            <span class="train-number" style="margin-left: var(--spacing-sm);">#12953</span>
+                        </div>
+                        <span class="badge badge-success">Runs Daily</span>
+                    </div>
+                    <div class="train-card-body">
+                        <div class="journey-info">
+                            <div class="station">
+                                <div class="station-time">17:40</div>
+                                <div class="station-name">Hazrat Nizamuddin (NZM)</div>
+                            </div>
+                            <div class="journey-line">
+                                <div class="journey-line-inner">
+                                    <span class="journey-duration">17h 10m</span>
+                                </div>
+                            </div>
+                            <div class="station">
+                                <div class="station-time">10:50</div>
+                                <div class="station-name">Mumbai Central (MMCT)</div>
+                            </div>
+                        </div>
+                        <div class="train-meta">
+                            <div class="seat-info">
+                                <div class="seat-class">
+                                    <div class="seat-class-name">1A</div>
+                                    <div class="seat-availability available">Available 8</div>
+                                </div>
+                                <div class="seat-class">
+                                    <div class="seat-class-name">2A</div>
+                                    <div class="seat-availability available">Available 32</div>
+                                </div>
+                                <div class="seat-class">
+                                    <div class="seat-class-name">3A</div>
+                                    <div class="seat-availability available">Available 56</div>
+                                </div>
+                            </div>
+                            <div class="train-fare">
+                                <div class="fare-label">Starting from</div>
+                                <div class="fare-amount">₹2,350</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: var(--spacing-lg); text-align: right;">
+                            <a href="train-details.html" class="btn btn-primary">View Details & Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Train 3 - Duronto Express -->
+                <div class="train-card">
+                    <div class="train-card-header">
+                        <div>
+                            <span class="train-name">Duronto Express</span>
+                            <span class="train-number" style="margin-left: var(--spacing-sm);">#12263</span>
+                        </div>
+                        <span class="badge badge-warning">Mon, Wed, Sat</span>
+                    </div>
+                    <div class="train-card-body">
+                        <div class="journey-info">
+                            <div class="station">
+                                <div class="station-time">23:00</div>
+                                <div class="station-name">Hazrat Nizamuddin (NZM)</div>
+                            </div>
+                            <div class="journey-line">
+                                <div class="journey-line-inner">
+                                    <span class="journey-duration">16h 20m</span>
+                                </div>
+                            </div>
+                            <div class="station">
+                                <div class="station-time">15:20</div>
+                                <div class="station-name">Mumbai Central (MMCT)</div>
+                            </div>
+                        </div>
+                        <div class="train-meta">
+                            <div class="seat-info">
+                                <div class="seat-class">
+                                    <div class="seat-class-name">2A</div>
+                                    <div class="seat-availability available">Available 28</div>
+                                </div>
+                                <div class="seat-class">
+                                    <div class="seat-class-name">3A</div>
+                                    <div class="seat-availability available">Available 72</div>
+                                </div>
+                                <div class="seat-class">
+                                    <div class="seat-class-name">SL</div>
+                                    <div class="seat-availability available">Available 120</div>
+                                </div>
+                            </div>
+                            <div class="train-fare">
+                                <div class="fare-label">Starting from</div>
+                                <div class="fare-amount">₹850</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: var(--spacing-lg); text-align: right;">
+                            <a href="train-details.html" class="btn btn-primary">View Details & Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Train 4 - Golden Temple Mail -->
+                <div class="train-card">
+                    <div class="train-card-header">
+                        <div>
+                            <span class="train-name">Golden Temple Mail</span>
+                            <span class="train-number" style="margin-left: var(--spacing-sm);">#12903</span>
+                        </div>
+                        <span class="badge badge-success">Runs Daily</span>
+                    </div>
+                    <div class="train-card-body">
+                        <div class="journey-info">
+                            <div class="station">
+                                <div class="station-time">21:30</div>
+                                <div class="station-name">New Delhi (NDLS)</div>
+                            </div>
+                            <div class="journey-line">
+                                <div class="journey-line-inner">
+                                    <span class="journey-duration">18h 40m</span>
+                                </div>
+                            </div>
+                            <div class="station">
+                                <div class="station-time">16:10</div>
+                                <div class="station-name">Mumbai Central (MMCT)</div>
+                            </div>
+                        </div>
+                        <div class="train-meta">
+                            <div class="seat-info">
+                                <div class="seat-class">
+                                    <div class="seat-class-name">2A</div>
+                                    <div class="seat-availability limited">WL 12</div>
+                                </div>
+                                <div class="seat-class">
+                                    <div class="seat-class-name">3A</div>
+                                    <div class="seat-availability available">Available 18</div>
+                                </div>
+                                <div class="seat-class">
+                                    <div class="seat-class-name">SL</div>
+                                    <div class="seat-availability available">Available 95</div>
+                                </div>
+                            </div>
+                            <div class="train-fare">
+                                <div class="fare-label">Starting from</div>
+                                <div class="fare-amount">₹550</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: var(--spacing-lg); text-align: right;">
+                            <a href="train-details.html" class="btn btn-primary">View Details & Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Train 5 - Paschim Express -->
+                <div class="train-card">
+                    <div class="train-card-header">
+                        <div>
+                            <span class="train-name">Paschim Express</span>
+                            <span class="train-number" style="margin-left: var(--spacing-sm);">#12925</span>
+                        </div>
+                        <span class="badge badge-success">Runs Daily</span>
+                    </div>
+                    <div class="train-card-body">
+                        <div class="journey-info">
+                            <div class="station">
+                                <div class="station-time">16:35</div>
+                                <div class="station-name">New Delhi (NDLS)</div>
+                            </div>
+                            <div class="journey-line">
+                                <div class="journey-line-inner">
+                                    <span class="journey-duration">22h 55m</span>
+                                </div>
+                            </div>
+                            <div class="station">
+                                <div class="station-time">15:30</div>
+                                <div class="station-name">Bandra Terminus (BDTS)</div>
+                            </div>
+                        </div>
+                        <div class="train-meta">
+                            <div class="seat-info">
+                                <div class="seat-class">
+                                    <div class="seat-class-name">2A</div>
+                                    <div class="seat-availability available">Available 22</div>
+                                </div>
+                                <div class="seat-class">
+                                    <div class="seat-class-name">3A</div>
+                                    <div class="seat-availability available">Available 65</div>
+                                </div>
+                                <div class="seat-class">
+                                    <div class="seat-class-name">SL</div>
+                                    <div class="seat-availability available">Available 180</div>
+                                </div>
+                            </div>
+                            <div class="train-fare">
+                                <div class="fare-label">Starting from</div>
+                                <div class="fare-amount">₹495</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: var(--spacing-lg); text-align: right;">
+                            <a href="train-details.html" class="btn btn-primary">View Details & Book</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Train 6 - Garib Rath -->
+                <div class="train-card">
+                    <div class="train-card-header">
+                        <div>
+                            <span class="train-name">Garib Rath Express</span>
+                            <span class="train-number" style="margin-left: var(--spacing-sm);">#12215</span>
+                        </div>
+                        <span class="badge badge-warning">Tue, Thu, Sun</span>
+                    </div>
+                    <div class="train-card-body">
+                        <div class="journey-info">
+                            <div class="station">
+                                <div class="station-time">15:50</div>
+                                <div class="station-name">New Delhi (NDLS)</div>
+                            </div>
+                            <div class="journey-line">
+                                <div class="journey-line-inner">
+                                    <span class="journey-duration">19h 45m</span>
+                                </div>
+                            </div>
+                            <div class="station">
+                                <div class="station-time">11:35</div>
+                                <div class="station-name">Bandra Terminus (BDTS)</div>
+                            </div>
+                        </div>
+                        <div class="train-meta">
+                            <div class="seat-info">
+                                <div class="seat-class">
+                                    <div class="seat-class-name">3A</div>
+                                    <div class="seat-availability available">Available 85</div>
+                                </div>
+                                <div class="seat-class">
+                                    <div class="seat-class-name">3E</div>
+                                    <div class="seat-availability available">Available 120</div>
+                                </div>
+                            </div>
+                            <div class="train-fare">
+                                <div class="fare-label">Starting from</div>
+                                <div class="fare-amount">₹750</div>
+                            </div>
+                        </div>
+                        <div style="margin-top: var(--spacing-lg); text-align: right;">
+                            <a href="train-details.html" class="btn btn-primary">View Details & Book</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RailBook</h4>
+                    <p>Your trusted partner for railway ticket booking. We make train travel simple and convenient.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="dashboard.html" class="footer-link">Dashboard</a>
+                        <a href="train-search.html" class="footer-link">Book Ticket</a>
+                        <a href="my-bookings.html" class="footer-link">My Bookings</a>
+                        <a href="profile.html" class="footer-link">Profile</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">FAQs</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span class="icon">📧</span>
+                            <span>support@railbook.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📞</span>
+                            <span>1800-XXX-XXXX</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📍</span>
+                            <span>New Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 RailBook. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

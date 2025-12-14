@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - RailBook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="dashboard.html" class="logo">
+                <div class="logo-icon">R</div>
+                RailBook
+            </a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="train-search.html" class="nav-link active">
+                        <span class="icon">🔍</span>
+                        <span>Book Ticket</span>
+                    </a></li>
+                    <li><a href="my-bookings.html" class="nav-link">
+                        <span class="icon">🎫</span>
+                        <span>My Bookings</span>
+                    </a></li>
+                </ul>
+                <a href="profile.html" class="profile-icon" title="My Profile">👤</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <a href="train-search.html" style="color: var(--gray-500);">Search</a>
+                <span style="color: var(--gray-400); margin: 0 var(--spacing-sm);">→</span>
+                <a href="train-list.html" style="color: var(--gray-500);">Train List</a>
+                <span style="color: var(--gray-400); margin: 0 var(--spacing-sm);">→</span>
+                <a href="passenger-details.html" style="color: var(--gray-500);">Passenger Details</a>
+                <span style="color: var(--gray-400); margin: 0 var(--spacing-sm);">→</span>
+                <span style="color: var(--gray-700);">Payment</span>
+            </div>
+
+            <!-- Progress Steps -->
+            <div style="display: flex; justify-content: center; margin-bottom: var(--spacing-2xl);">
+                <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 32px; height: 32px; background-color: var(--success-color); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600;">✓</div>
+                        <span style="color: var(--success-color); font-weight: 500;">Select Train</span>
+                    </div>
+                    <div style="width: 60px; height: 2px; background-color: var(--success-color);"></div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 32px; height: 32px; background-color: var(--success-color); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600;">✓</div>
+                        <span style="color: var(--success-color); font-weight: 500;">Passenger Details</span>
+                    </div>
+                    <div style="width: 60px; height: 2px; background-color: var(--success-color);"></div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 32px; height: 32px; background-color: var(--primary-color); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600;">3</div>
+                        <span style="color: var(--primary-color); font-weight: 500;">Payment</span>
+                    </div>
+                    <div style="width: 60px; height: 2px; background-color: var(--gray-300);"></div>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                        <div style="width: 32px; height: 32px; background-color: var(--gray-300); color: var(--gray-600); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600;">4</div>
+                        <span style="color: var(--gray-500);">Confirmation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-2xl);">
+                <!-- Left Column - Payment Options -->
+                <div>
+                    <!-- Time Warning -->
+                    <div class="alert alert-warning" style="margin-bottom: var(--spacing-xl);">
+                        <span style="font-size: 1.25rem;">⏰</span>
+                        <div>
+                            <strong>Complete your payment within 10:00 minutes</strong>
+                            <p style="margin-bottom: 0; font-size: var(--font-size-sm);">Your seats are temporarily held. They will be released if payment is not completed in time.</p>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="card" style="margin-bottom: var(--spacing-xl);">
+                        <div class="card-header">
+                            <h3>Select Payment Method</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="payment-options">
+                                <!-- UPI -->
+                                <label class="payment-option selected">
+                                    <input type="radio" name="payment" value="upi" checked>
+                                    <div class="payment-icon">📱</div>
+                                    <div class="payment-info">
+                                        <h4>UPI</h4>
+                                        <p>Pay using Google Pay, PhonePe, Paytm or any UPI app</p>
+                                    </div>
+                                </label>
+
+                                <!-- Credit/Debit Card -->
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card">
+                                    <div class="payment-icon">💳</div>
+                                    <div class="payment-info">
+                                        <h4>Credit / Debit Card</h4>
+                                        <p>Visa, Mastercard, Rupay and more</p>
+                                    </div>
+                                </label>
+
+                                <!-- Net Banking -->
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="netbanking">
+                                    <div class="payment-icon">🏦</div>
+                                    <div class="payment-info">
+                                        <h4>Net Banking</h4>
+                                        <p>All major banks supported</p>
+                                    </div>
+                                </label>
+
+                                <!-- Wallets -->
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="wallet">
+                                    <div class="payment-icon">👛</div>
+                                    <div class="payment-info">
+                                        <h4>Mobile Wallets</h4>
+                                        <p>Paytm, Amazon Pay, Mobikwik</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UPI Payment Form (Default shown) -->
+                    <div class="card" style="margin-bottom: var(--spacing-xl);">
+                        <div class="card-header">
+                            <h3>Enter UPI Details</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label class="form-label" for="upi-id">UPI ID</label>
+                                <input type="text" id="upi-id" class="form-input" placeholder="yourname@upi">
+                                <span class="form-hint">Enter your UPI ID linked to your bank account</span>
+                            </div>
+                            <div style="display: flex; gap: var(--spacing-md); flex-wrap: wrap; margin-top: var(--spacing-lg);">
+                                <div style="padding: var(--spacing-sm) var(--spacing-md); border: 1px solid var(--gray-200); border-radius: var(--radius-md); display: flex; align-items: center; gap: var(--spacing-sm); cursor: pointer;">
+                                    <span style="font-size: 1.25rem;">📲</span>
+                                    <span style="font-size: var(--font-size-sm);">Google Pay</span>
+                                </div>
+                                <div style="padding: var(--spacing-sm) var(--spacing-md); border: 1px solid var(--gray-200); border-radius: var(--radius-md); display: flex; align-items: center; gap: var(--spacing-sm); cursor: pointer;">
+                                    <span style="font-size: 1.25rem;">📲</span>
+                                    <span style="font-size: var(--font-size-sm);">PhonePe</span>
+                                </div>
+                                <div style="padding: var(--spacing-sm) var(--spacing-md); border: 1px solid var(--gray-200); border-radius: var(--radius-md); display: flex; align-items: center; gap: var(--spacing-sm); cursor: pointer;">
+                                    <span style="font-size: 1.25rem;">📲</span>
+                                    <span style="font-size: var(--font-size-sm);">Paytm</span>
+                                </div>
+                                <div style="padding: var(--spacing-sm) var(--spacing-md); border: 1px solid var(--gray-200); border-radius: var(--radius-md); display: flex; align-items: center; gap: var(--spacing-sm); cursor: pointer;">
+                                    <span style="font-size: 1.25rem;">📲</span>
+                                    <span style="font-size: var(--font-size-sm);">BHIM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Info -->
+                    <div class="card">
+                        <div class="card-body">
+                            <div style="display: flex; align-items: center; gap: var(--spacing-lg);">
+                                <div style="font-size: 2rem;">🔒</div>
+                                <div>
+                                    <h4 style="margin-bottom: var(--spacing-xs);">100% Secure Payments</h4>
+                                    <p style="color: var(--gray-500); font-size: var(--font-size-sm); margin-bottom: 0;">All transactions are encrypted and secured. Your financial information is safe with us.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Booking Summary -->
+                <div>
+                    <div class="card" style="position: sticky; top: 100px;">
+                        <div class="card-header">
+                            <h3>Booking Summary</h3>
+                        </div>
+                        <div class="card-body">
+                            <!-- Train Info -->
+                            <div style="padding-bottom: var(--spacing-md); border-bottom: 1px solid var(--gray-200); margin-bottom: var(--spacing-md);">
+                                <div style="font-weight: 600; font-size: var(--font-size-lg); margin-bottom: var(--spacing-xs);">Rajdhani Express</div>
+                                <div style="color: var(--gray-500); font-size: var(--font-size-sm);">#12301 | Dec 20, 2024</div>
+                            </div>
+
+                            <!-- Journey Info -->
+                            <div style="display: flex; align-items: center; gap: var(--spacing-md); padding-bottom: var(--spacing-md); border-bottom: 1px solid var(--gray-200); margin-bottom: var(--spacing-md);">
+                                <div>
+                                    <div style="font-weight: 600;">16:55</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">NDLS</div>
+                                </div>
+                                <div style="flex: 1; text-align: center;">
+                                    <div style="font-size: var(--font-size-xs); color: var(--gray-500);">15h 35m</div>
+                                    <div style="height: 2px; background-color: var(--gray-300); margin: var(--spacing-xs) 0;"></div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="font-weight: 600;">08:30</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">MMCT</div>
+                                </div>
+                            </div>
+
+                            <!-- Passenger Info -->
+                            <div style="padding-bottom: var(--spacing-md); border-bottom: 1px solid var(--gray-200); margin-bottom: var(--spacing-md);">
+                                <div style="font-weight: 600; margin-bottom: var(--spacing-sm);">Passengers</div>
+                                <div style="display: flex; justify-content: space-between; font-size: var(--font-size-sm); color: var(--gray-600); margin-bottom: var(--spacing-xs);">
+                                    <span>1. John Doe (M, 32)</span>
+                                    <span>1A</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; font-size: var(--font-size-sm); color: var(--gray-600);">
+                                    <span>2. Jane Doe (F, 28)</span>
+                                    <span>1A</span>
+                                </div>
+                            </div>
+
+                            <!-- Fare Breakdown -->
+                            <div class="booking-summary">
+                                <div class="summary-row">
+                                    <span class="summary-label">Base Fare (x2)</span>
+                                    <span class="summary-value">₹9,000</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Reservation Charge</span>
+                                    <span class="summary-value">₹120</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Catering Charge</span>
+                                    <span class="summary-value">₹500</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">GST (5%)</span>
+                                    <span class="summary-value">₹80</span>
+                                </div>
+                                <div class="summary-row" style="font-size: var(--font-size-xl); color: var(--primary-color); padding-top: var(--spacing-md); border-top: 2px solid var(--gray-200);">
+                                    <span class="summary-label">Total Amount</span>
+                                    <span class="summary-value">₹9,700</span>
+                                </div>
+                            </div>
+
+                            <a href="confirmation.html" class="btn btn-primary btn-block btn-lg" style="margin-top: var(--spacing-lg);">
+                                Pay ₹9,700
+                            </a>
+
+                            <p style="text-align: center; color: var(--gray-500); font-size: var(--font-size-xs); margin-top: var(--spacing-md); margin-bottom: 0;">
+                                By clicking Pay, you agree to our Terms & Conditions and Cancellation Policy
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RailBook</h4>
+                    <p>Your trusted partner for railway ticket booking. We make train travel simple and convenient.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="dashboard.html" class="footer-link">Dashboard</a>
+                        <a href="train-search.html" class="footer-link">Book Ticket</a>
+                        <a href="my-bookings.html" class="footer-link">My Bookings</a>
+                        <a href="profile.html" class="footer-link">Profile</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">FAQs</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span class="icon">📧</span>
+                            <span>support@railbook.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📞</span>
+                            <span>1800-XXX-XXXX</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📍</span>
+                            <span>New Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 RailBook. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

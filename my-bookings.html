@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - RailBook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="dashboard.html" class="logo">
+                <div class="logo-icon">R</div>
+                RailBook
+            </a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="train-search.html" class="nav-link">
+                        <span class="icon">🔍</span>
+                        <span>Book Ticket</span>
+                    </a></li>
+                    <li><a href="my-bookings.html" class="nav-link active">
+                        <span class="icon">🎫</span>
+                        <span>My Bookings</span>
+                    </a></li>
+                </ul>
+                <a href="profile.html" class="profile-icon" title="My Profile">👤</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>My Bookings</h1>
+                <p>View and manage all your train ticket bookings</p>
+            </div>
+
+            <!-- Booking Stats -->
+            <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: var(--spacing-2xl);">
+                <div class="stat-card">
+                    <div class="stat-icon primary">🎫</div>
+                    <div class="stat-content">
+                        <h3>12</h3>
+                        <p>Total Bookings</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon warning">📅</div>
+                    <div class="stat-content">
+                        <h3>2</h3>
+                        <p>Upcoming</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon success">✓</div>
+                    <div class="stat-content">
+                        <h3>10</h3>
+                        <p>Completed</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Bookings Section -->
+            <div class="card" style="margin-bottom: var(--spacing-2xl);">
+                <div class="card-header">
+                    <h3>Upcoming Journeys</h3>
+                </div>
+                <div class="card-body">
+                    <!-- Booking Card 1 -->
+                    <div class="train-card" style="margin-bottom: var(--spacing-lg);">
+                        <div class="train-card-header">
+                            <div>
+                                <span class="train-name">Rajdhani Express</span>
+                                <span class="train-number" style="margin-left: var(--spacing-sm);">#12301</span>
+                            </div>
+                            <span class="badge badge-success">Confirmed</span>
+                        </div>
+                        <div class="train-card-body">
+                            <div class="journey-info">
+                                <div class="station">
+                                    <div class="station-time">06:00</div>
+                                    <div class="station-name">New Delhi (NDLS)</div>
+                                    <div style="font-size: 0.75rem; color: var(--gray-500);">Dec 20, 2024</div>
+                                </div>
+                                <div class="journey-line">
+                                    <div class="journey-line-inner">
+                                        <span class="journey-duration">16h 35m</span>
+                                    </div>
+                                </div>
+                                <div class="station">
+                                    <div class="station-time">22:35</div>
+                                    <div class="station-name">Mumbai Central (MMCT)</div>
+                                    <div style="font-size: 0.75rem; color: var(--gray-500);">Dec 20, 2024</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: var(--spacing-md); border-top: 1px solid var(--gray-200);">
+                                <div>
+                                    <span style="font-size: 0.75rem; color: var(--gray-500);">PNR Number</span>
+                                    <div style="font-weight: 600;">PNR2847561</div>
+                                </div>
+                                <div>
+                                    <span style="font-size: 0.75rem; color: var(--gray-500);">Class</span>
+                                    <div style="font-weight: 600;">AC 2 Tier</div>
+                                </div>
+                                <div>
+                                    <span style="font-size: 0.75rem; color: var(--gray-500);">Passengers</span>
+                                    <div style="font-weight: 600;">2</div>
+                                </div>
+                                <div>
+                                    <span style="font-size: 0.75rem; color: var(--gray-500);">Seat/Berth</span>
+                                    <div style="font-weight: 600;">B2-45, B2-46</div>
+                                </div>
+                                <a href="confirmation.html" class="btn btn-primary btn-sm">View Ticket</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Card 2 -->
+                    <div class="train-card">
+                        <div class="train-card-header">
+                            <div>
+                                <span class="train-name">Shatabdi Express</span>
+                                <span class="train-number" style="margin-left: var(--spacing-sm);">#12002</span>
+                            </div>
+                            <span class="badge badge-success">Confirmed</span>
+                        </div>
+                        <div class="train-card-body">
+                            <div class="journey-info">
+                                <div class="station">
+                                    <div class="station-time">06:15</div>
+                                    <div class="station-name">New Delhi (NDLS)</div>
+                                    <div style="font-size: 0.75rem; color: var(--gray-500);">Dec 25, 2024</div>
+                                </div>
+                                <div class="journey-line">
+                                    <div class="journey-line-inner">
+                                        <span class="journey-duration">8h 25m</span>
+                                    </div>
+                                </div>
+                                <div class="station">
+                                    <div class="station-time">14:40</div>
+                                    <div class="station-name">Bhopal Jn (BPL)</div>
+                                    <div style="font-size: 0.75rem; color: var(--gray-500);">Dec 25, 2024</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: var(--spacing-md); border-top: 1px solid var(--gray-200);">
+                                <div>
+                                    <span style="font-size: 0.75rem; color: var(--gray-500);">PNR Number</span>
+                                    <div style="font-weight: 600;">PNR2847562</div>
+                                </div>
+                                <div>
+                                    <span style="font-size: 0.75rem; color: var(--gray-500);">Class</span>
+                                    <div style="font-weight: 600;">Executive Chair</div>
+                                </div>
+                                <div>
+                                    <span style="font-size: 0.75rem; color: var(--gray-500);">Passengers</span>
+                                    <div style="font-weight: 600;">1</div>
+                                </div>
+                                <div>
+                                    <span style="font-size: 0.75rem; color: var(--gray-500);">Seat/Berth</span>
+                                    <div style="font-weight: 600;">E1-12</div>
+                                </div>
+                                <a href="confirmation.html" class="btn btn-primary btn-sm">View Ticket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Bookings Section -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Past Bookings</h3>
+                </div>
+                <div class="card-body" style="padding: 0;">
+                    <div class="table-container" style="box-shadow: none;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>PNR Number</th>
+                                    <th>Train</th>
+                                    <th>Route</th>
+                                    <th>Travel Date</th>
+                                    <th>Class</th>
+                                    <th>Fare</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>PNR2847563</strong></td>
+                                    <td>Duronto Express (12213)</td>
+                                    <td>Mumbai → Bangalore</td>
+                                    <td>Dec 15, 2024</td>
+                                    <td>AC 3 Tier</td>
+                                    <td>₹1,850</td>
+                                    <td><span class="badge badge-primary">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847550</strong></td>
+                                    <td>Garib Rath (12216)</td>
+                                    <td>Delhi → Mumbai</td>
+                                    <td>Dec 10, 2024</td>
+                                    <td>AC 3 Tier</td>
+                                    <td>₹1,200</td>
+                                    <td><span class="badge badge-primary">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847545</strong></td>
+                                    <td>August Kranti (12954)</td>
+                                    <td>Mumbai → Delhi</td>
+                                    <td>Dec 05, 2024</td>
+                                    <td>AC 2 Tier</td>
+                                    <td>₹2,450</td>
+                                    <td><span class="badge badge-primary">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847530</strong></td>
+                                    <td>Karnataka Express (12628)</td>
+                                    <td>Delhi → Bangalore</td>
+                                    <td>Nov 28, 2024</td>
+                                    <td>Sleeper</td>
+                                    <td>₹750</td>
+                                    <td><span class="badge badge-primary">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847520</strong></td>
+                                    <td>Tejas Express (22120)</td>
+                                    <td>Mumbai → Goa</td>
+                                    <td>Nov 20, 2024</td>
+                                    <td>Chair Car</td>
+                                    <td>₹1,100</td>
+                                    <td><span class="badge badge-primary">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847510</strong></td>
+                                    <td>Vande Bharat (22436)</td>
+                                    <td>Delhi → Varanasi</td>
+                                    <td>Nov 15, 2024</td>
+                                    <td>Chair Car</td>
+                                    <td>₹1,500</td>
+                                    <td><span class="badge badge-primary">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847500</strong></td>
+                                    <td>Tamil Nadu Express (12622)</td>
+                                    <td>Delhi → Chennai</td>
+                                    <td>Nov 10, 2024</td>
+                                    <td>AC 2 Tier</td>
+                                    <td>₹2,800</td>
+                                    <td><span class="badge badge-primary">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847490</strong></td>
+                                    <td>Howrah Rajdhani (12302)</td>
+                                    <td>Delhi → Kolkata</td>
+                                    <td>Nov 05, 2024</td>
+                                    <td>AC 1st Class</td>
+                                    <td>₹4,200</td>
+                                    <td><span class="badge badge-primary">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847480</strong></td>
+                                    <td>Golden Temple Mail (12904)</td>
+                                    <td>Mumbai → Amritsar</td>
+                                    <td>Oct 28, 2024</td>
+                                    <td>AC 3 Tier</td>
+                                    <td>₹1,650</td>
+                                    <td><span class="badge badge-error">Cancelled</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847470</strong></td>
+                                    <td>Mysore Express (12614)</td>
+                                    <td>Chennai → Mysore</td>
+                                    <td>Oct 20, 2024</td>
+                                    <td>Sleeper</td>
+                                    <td>₹450</td>
+                                    <td><span class="badge badge-primary">Completed</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RailBook</h4>
+                    <p>Your trusted partner for railway ticket booking. We make train travel simple and convenient.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="dashboard.html" class="footer-link">Dashboard</a>
+                        <a href="train-search.html" class="footer-link">Book Ticket</a>
+                        <a href="my-bookings.html" class="footer-link">My Bookings</a>
+                        <a href="profile.html" class="footer-link">Profile</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">FAQs</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span class="icon">📧</span>
+                            <span>support@railbook.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📞</span>
+                            <span>1800-XXX-XXXX</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📍</span>
+                            <span>New Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 RailBook. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

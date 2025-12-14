@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - RailBook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">R</div>
+                RailBook
+            </a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="login.html" class="nav-link">User Login</a></li>
+                    <li><a href="admin-login.html" class="nav-link active">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Admin Login Form -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div style="width: 60px; height: 60px; background-color: var(--gray-900); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--spacing-md); color: var(--white); font-size: 1.5rem;">
+                    🔐
+                </div>
+                <h1>Admin Portal</h1>
+                <p>Login to access the admin dashboard</p>
+            </div>
+            <form action="admin-dashboard.html" method="get">
+                <div class="form-group">
+                    <label class="form-label" for="admin-username">Admin Username</label>
+                    <input type="text" id="admin-username" class="form-input" placeholder="Enter admin username" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="admin-password">Password</label>
+                    <input type="password" id="admin-password" class="form-input" placeholder="Enter admin password" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-checkbox">
+                        <input type="checkbox">
+                        <span>Keep me logged in</span>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Login to Dashboard</button>
+            </form>
+            <div class="auth-footer">
+                <p>Not an admin? <a href="login.html">Go to User Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RailBook</h4>
+                    <p>Your trusted partner for railway ticket booking. We make train travel simple and convenient.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="login.html" class="footer-link">Login</a>
+                        <a href="register.html" class="footer-link">Register</a>
+                        <a href="train-search.html" class="footer-link">Search Trains</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">FAQs</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span class="icon">📧</span>
+                            <span>support@railbook.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📞</span>
+                            <span>1800-XXX-XXXX</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📍</span>
+                            <span>New Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 RailBook. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

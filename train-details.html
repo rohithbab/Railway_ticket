@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Details - RailBook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="dashboard.html" class="logo">
+                <div class="logo-icon">R</div>
+                RailBook
+            </a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="train-search.html" class="nav-link active">
+                        <span class="icon">🔍</span>
+                        <span>Book Ticket</span>
+                    </a></li>
+                    <li><a href="my-bookings.html" class="nav-link">
+                        <span class="icon">🎫</span>
+                        <span>My Bookings</span>
+                    </a></li>
+                </ul>
+                <a href="profile.html" class="profile-icon" title="My Profile">👤</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <a href="train-search.html" style="color: var(--gray-500);">Search</a>
+                <span style="color: var(--gray-400); margin: 0 var(--spacing-sm);">→</span>
+                <a href="train-list.html" style="color: var(--gray-500);">Train List</a>
+                <span style="color: var(--gray-400); margin: 0 var(--spacing-sm);">→</span>
+                <span style="color: var(--gray-700);">Train Details</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-2xl);">
+                <!-- Left Column - Train Details -->
+                <div>
+                    <!-- Train Info Card -->
+                    <div class="card" style="margin-bottom: var(--spacing-xl);">
+                        <div class="train-card-header" style="border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+                            <div>
+                                <span class="train-name" style="font-size: var(--font-size-xl);">Rajdhani Express</span>
+                                <span class="train-number" style="margin-left: var(--spacing-sm);">#12301</span>
+                            </div>
+                            <span class="badge badge-success">Runs Daily</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="journey-info" style="padding: var(--spacing-lg) 0;">
+                                <div class="station">
+                                    <div class="station-time" style="font-size: var(--font-size-2xl);">16:55</div>
+                                    <div class="station-name" style="font-size: var(--font-size-lg);">New Delhi (NDLS)</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">Dec 20, 2024</div>
+                                </div>
+                                <div class="journey-line">
+                                    <div class="journey-line-inner">
+                                        <span class="journey-duration">15h 35m</span>
+                                    </div>
+                                </div>
+                                <div class="station">
+                                    <div class="station-time" style="font-size: var(--font-size-2xl);">08:30</div>
+                                    <div class="station-name" style="font-size: var(--font-size-lg);">Mumbai Central (MMCT)</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">Dec 21, 2024</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Available Classes & Fare -->
+                    <div class="card" style="margin-bottom: var(--spacing-xl);">
+                        <div class="card-header">
+                            <h3>Select Class</h3>
+                        </div>
+                        <div class="card-body">
+                            <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                                <!-- Class Option 1 -->
+                                <label class="payment-option" style="cursor: pointer;">
+                                    <input type="radio" name="class" value="1A" checked>
+                                    <div style="flex: 1; display: flex; justify-content: space-between; align-items: center;">
+                                        <div>
+                                            <h4 style="margin-bottom: var(--spacing-xs);">First AC (1A)</h4>
+                                            <p style="color: var(--gray-500); font-size: var(--font-size-sm); margin-bottom: 0;">Private cabin with 2/4 berths, premium bedding</p>
+                                        </div>
+                                        <div style="text-align: right;">
+                                            <div style="font-size: var(--font-size-xl); font-weight: 700; color: var(--primary-color);">₹4,850</div>
+                                            <div class="seat-availability available" style="font-size: var(--font-size-sm);">Available 12</div>
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <!-- Class Option 2 -->
+                                <label class="payment-option" style="cursor: pointer;">
+                                    <input type="radio" name="class" value="2A">
+                                    <div style="flex: 1; display: flex; justify-content: space-between; align-items: center;">
+                                        <div>
+                                            <h4 style="margin-bottom: var(--spacing-xs);">AC 2 Tier (2A)</h4>
+                                            <p style="color: var(--gray-500); font-size: var(--font-size-sm); margin-bottom: 0;">Open bay with 4 berths, curtains for privacy</p>
+                                        </div>
+                                        <div style="text-align: right;">
+                                            <div style="font-size: var(--font-size-xl); font-weight: 700; color: var(--primary-color);">₹2,850</div>
+                                            <div class="seat-availability available" style="font-size: var(--font-size-sm);">Available 45</div>
+                                        </div>
+                                    </div>
+                                </label>
+
+                                <!-- Class Option 3 -->
+                                <label class="payment-option" style="cursor: pointer;">
+                                    <input type="radio" name="class" value="3A">
+                                    <div style="flex: 1; display: flex; justify-content: space-between; align-items: center;">
+                                        <div>
+                                            <h4 style="margin-bottom: var(--spacing-xs);">AC 3 Tier (3A)</h4>
+                                            <p style="color: var(--gray-500); font-size: var(--font-size-sm); margin-bottom: 0;">Open bay with 6 berths, economical AC travel</p>
+                                        </div>
+                                        <div style="text-align: right;">
+                                            <div style="font-size: var(--font-size-xl); font-weight: 700; color: var(--primary-color);">₹1,950</div>
+                                            <div class="seat-availability limited" style="font-size: var(--font-size-sm);">RAC 5</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Route & Stops -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Route & Stoppages</h3>
+                        </div>
+                        <div class="card-body" style="padding: 0;">
+                            <div class="table-container" style="box-shadow: none;">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Station</th>
+                                            <th>Arrival</th>
+                                            <th>Departure</th>
+                                            <th>Halt</th>
+                                            <th>Day</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>New Delhi (NDLS)</strong></td>
+                                            <td>-</td>
+                                            <td>16:55</td>
+                                            <td>-</td>
+                                            <td>Day 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mathura Junction (MTJ)</td>
+                                            <td>18:38</td>
+                                            <td>18:40</td>
+                                            <td>2 min</td>
+                                            <td>Day 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kota Junction (KOTA)</td>
+                                            <td>22:05</td>
+                                            <td>22:15</td>
+                                            <td>10 min</td>
+                                            <td>Day 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ratlam Junction (RTM)</td>
+                                            <td>00:55</td>
+                                            <td>01:00</td>
+                                            <td>5 min</td>
+                                            <td>Day 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vadodara Junction (BRC)</td>
+                                            <td>04:10</td>
+                                            <td>04:15</td>
+                                            <td>5 min</td>
+                                            <td>Day 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Surat (ST)</td>
+                                            <td>05:55</td>
+                                            <td>06:00</td>
+                                            <td>5 min</td>
+                                            <td>Day 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Mumbai Central (MMCT)</strong></td>
+                                            <td>08:30</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>Day 2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Booking Summary -->
+                <div>
+                    <div class="card" style="position: sticky; top: 100px;">
+                        <div class="card-header">
+                            <h3>Booking Summary</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="booking-summary" style="background-color: var(--white); padding: 0; margin-bottom: var(--spacing-lg);">
+                                <div class="summary-row">
+                                    <span class="summary-label">Train</span>
+                                    <span class="summary-value">Rajdhani Express</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Date</span>
+                                    <span class="summary-value">Dec 20, 2024</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">From</span>
+                                    <span class="summary-value">New Delhi</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">To</span>
+                                    <span class="summary-value">Mumbai Central</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Class</span>
+                                    <span class="summary-value">First AC (1A)</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Passengers</span>
+                                    <span class="summary-value">1 Adult</span>
+                                </div>
+                            </div>
+
+                            <div class="booking-summary">
+                                <div class="summary-row">
+                                    <span class="summary-label">Base Fare</span>
+                                    <span class="summary-value">₹4,500</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Reservation Charge</span>
+                                    <span class="summary-value">₹60</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Catering Charge</span>
+                                    <span class="summary-value">₹250</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">GST (5%)</span>
+                                    <span class="summary-value">₹40</span>
+                                </div>
+                                <div class="summary-row" style="font-size: var(--font-size-lg); color: var(--primary-color);">
+                                    <span class="summary-label">Total Amount</span>
+                                    <span class="summary-value">₹4,850</span>
+                                </div>
+                            </div>
+
+                            <a href="passenger-details.html" class="btn btn-primary btn-block btn-lg" style="margin-top: var(--spacing-lg);">
+                                Proceed to Book
+                            </a>
+
+                            <p style="text-align: center; color: var(--gray-500); font-size: var(--font-size-sm); margin-top: var(--spacing-md); margin-bottom: 0;">
+                                Seats will be allocated after payment
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RailBook</h4>
+                    <p>Your trusted partner for railway ticket booking. We make train travel simple and convenient.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="dashboard.html" class="footer-link">Dashboard</a>
+                        <a href="train-search.html" class="footer-link">Book Ticket</a>
+                        <a href="my-bookings.html" class="footer-link">My Bookings</a>
+                        <a href="profile.html" class="footer-link">Profile</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">FAQs</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span class="icon">📧</span>
+                            <span>support@railbook.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📞</span>
+                            <span>1800-XXX-XXXX</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📍</span>
+                            <span>New Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 RailBook. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

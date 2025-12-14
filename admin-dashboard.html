@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - RailBook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Admin Header -->
+    <header class="header admin-header">
+        <div class="header-container">
+            <a href="admin-dashboard.html" class="logo">
+                <div class="logo-icon">R</div>
+                RailBook Admin
+            </a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="admin-dashboard.html" class="nav-link active">
+                        <span class="icon">📊</span>
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="admin-analytics.html" class="nav-link">
+                        <span class="icon">📈</span>
+                        <span>Analytics</span>
+                    </a></li>
+                    <li><a href="index.html" class="nav-link">
+                        <span class="icon">🚪</span>
+                        <span>Logout</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Admin Dashboard</h1>
+                <p>Welcome back, Admin! Here's an overview of your railway booking system.</p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon primary">👥</div>
+                    <div class="stat-content">
+                        <h3>12,458</h3>
+                        <p>Total Users</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon success">🎫</div>
+                    <div class="stat-content">
+                        <h3>48,562</h3>
+                        <p>Total Tickets Booked</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon warning">📅</div>
+                    <div class="stat-content">
+                        <h3>1,247</h3>
+                        <p>Bookings Today</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon info">💰</div>
+                    <div class="stat-content">
+                        <h3>₹24.5L</h3>
+                        <p>Revenue Today</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-xl); margin-bottom: var(--spacing-2xl);">
+                <!-- Booking Trends -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Booking Trends (Last 7 Days)</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Simple Bar Chart Representation -->
+                        <div style="display: flex; align-items: flex-end; justify-content: space-between; height: 200px; padding: var(--spacing-lg) 0;">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm);">
+                                <div style="width: 40px; height: 120px; background: linear-gradient(to top, var(--primary-color), var(--primary-light)); border-radius: var(--radius-sm);"></div>
+                                <span style="font-size: var(--font-size-sm); color: var(--gray-500);">Mon</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm);">
+                                <div style="width: 40px; height: 150px; background: linear-gradient(to top, var(--primary-color), var(--primary-light)); border-radius: var(--radius-sm);"></div>
+                                <span style="font-size: var(--font-size-sm); color: var(--gray-500);">Tue</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm);">
+                                <div style="width: 40px; height: 100px; background: linear-gradient(to top, var(--primary-color), var(--primary-light)); border-radius: var(--radius-sm);"></div>
+                                <span style="font-size: var(--font-size-sm); color: var(--gray-500);">Wed</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm);">
+                                <div style="width: 40px; height: 180px; background: linear-gradient(to top, var(--primary-color), var(--primary-light)); border-radius: var(--radius-sm);"></div>
+                                <span style="font-size: var(--font-size-sm); color: var(--gray-500);">Thu</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm);">
+                                <div style="width: 40px; height: 200px; background: linear-gradient(to top, var(--primary-color), var(--primary-light)); border-radius: var(--radius-sm);"></div>
+                                <span style="font-size: var(--font-size-sm); color: var(--gray-500);">Fri</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm);">
+                                <div style="width: 40px; height: 170px; background: linear-gradient(to top, var(--primary-color), var(--primary-light)); border-radius: var(--radius-sm);"></div>
+                                <span style="font-size: var(--font-size-sm); color: var(--gray-500);">Sat</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-sm);">
+                                <div style="width: 40px; height: 140px; background: linear-gradient(to top, var(--primary-color), var(--primary-light)); border-radius: var(--radius-sm);"></div>
+                                <span style="font-size: var(--font-size-sm); color: var(--gray-500);">Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Status Distribution -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Booking Status</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm);">
+                                    <span style="font-size: var(--font-size-sm);">Confirmed</span>
+                                    <span style="font-size: var(--font-size-sm); font-weight: 600;">78%</span>
+                                </div>
+                                <div style="height: 8px; background-color: var(--gray-200); border-radius: var(--radius-full);">
+                                    <div style="height: 100%; width: 78%; background-color: var(--success-color); border-radius: var(--radius-full);"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm);">
+                                    <span style="font-size: var(--font-size-sm);">RAC</span>
+                                    <span style="font-size: var(--font-size-sm); font-weight: 600;">12%</span>
+                                </div>
+                                <div style="height: 8px; background-color: var(--gray-200); border-radius: var(--radius-full);">
+                                    <div style="height: 100%; width: 12%; background-color: var(--warning-color); border-radius: var(--radius-full);"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm);">
+                                    <span style="font-size: var(--font-size-sm);">Waitlist</span>
+                                    <span style="font-size: var(--font-size-sm); font-weight: 600;">7%</span>
+                                </div>
+                                <div style="height: 8px; background-color: var(--gray-200); border-radius: var(--radius-full);">
+                                    <div style="height: 100%; width: 7%; background-color: var(--info-color); border-radius: var(--radius-full);"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-sm);">
+                                    <span style="font-size: var(--font-size-sm);">Cancelled</span>
+                                    <span style="font-size: var(--font-size-sm); font-weight: 600;">3%</span>
+                                </div>
+                                <div style="height: 8px; background-color: var(--gray-200); border-radius: var(--radius-full);">
+                                    <div style="height: 100%; width: 3%; background-color: var(--error-color); border-radius: var(--radius-full);"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Bookings Table -->
+            <div class="card" style="margin-bottom: var(--spacing-2xl);">
+                <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3>Recent Bookings</h3>
+                    <a href="admin-analytics.html" class="btn btn-secondary btn-sm">View All</a>
+                </div>
+                <div class="card-body" style="padding: 0;">
+                    <div class="table-container" style="box-shadow: none;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>PNR Number</th>
+                                    <th>User</th>
+                                    <th>Train</th>
+                                    <th>Route</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>PNR2847590</strong></td>
+                                    <td>Rahul Sharma</td>
+                                    <td>Rajdhani Express (12301)</td>
+                                    <td>Delhi → Mumbai</td>
+                                    <td>Dec 20, 2024</td>
+                                    <td>₹4,850</td>
+                                    <td><span class="badge badge-success">Confirmed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847589</strong></td>
+                                    <td>Priya Patel</td>
+                                    <td>Shatabdi Express (12002)</td>
+                                    <td>Delhi → Bhopal</td>
+                                    <td>Dec 19, 2024</td>
+                                    <td>₹1,650</td>
+                                    <td><span class="badge badge-success">Confirmed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847588</strong></td>
+                                    <td>Amit Kumar</td>
+                                    <td>Duronto Express (12263)</td>
+                                    <td>Delhi → Mumbai</td>
+                                    <td>Dec 18, 2024</td>
+                                    <td>₹2,450</td>
+                                    <td><span class="badge badge-warning">RAC</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847587</strong></td>
+                                    <td>Sneha Gupta</td>
+                                    <td>Vande Bharat (22436)</td>
+                                    <td>Delhi → Varanasi</td>
+                                    <td>Dec 18, 2024</td>
+                                    <td>₹1,500</td>
+                                    <td><span class="badge badge-success">Confirmed</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PNR2847586</strong></td>
+                                    <td>Vikram Singh</td>
+                                    <td>Garib Rath (12215)</td>
+                                    <td>Delhi → Mumbai</td>
+                                    <td>Dec 17, 2024</td>
+                                    <td>₹950</td>
+                                    <td><span class="badge badge-error">Cancelled</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl);">
+                <!-- Popular Routes -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Top Routes (This Week)</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-sm) 0; border-bottom: 1px solid var(--gray-200);">
+                                <div>
+                                    <div style="font-weight: 600;">Delhi → Mumbai</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">3,245 bookings</div>
+                                </div>
+                                <span class="badge badge-primary">+12%</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-sm) 0; border-bottom: 1px solid var(--gray-200);">
+                                <div>
+                                    <div style="font-weight: 600;">Delhi → Kolkata</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">2,890 bookings</div>
+                                </div>
+                                <span class="badge badge-primary">+8%</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-sm) 0; border-bottom: 1px solid var(--gray-200);">
+                                <div>
+                                    <div style="font-weight: 600;">Mumbai → Bangalore</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">2,456 bookings</div>
+                                </div>
+                                <span class="badge badge-success">+15%</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-sm) 0; border-bottom: 1px solid var(--gray-200);">
+                                <div>
+                                    <div style="font-weight: 600;">Chennai → Delhi</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">1,987 bookings</div>
+                                </div>
+                                <span class="badge badge-warning">-3%</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-sm) 0;">
+                                <div>
+                                    <div style="font-weight: 600;">Delhi → Jaipur</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">1,654 bookings</div>
+                                </div>
+                                <span class="badge badge-primary">+5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Users -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>New Users (Today)</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                            <div style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-sm) 0; border-bottom: 1px solid var(--gray-200);">
+                                <div style="width: 40px; height: 40px; background-color: var(--primary-lighter); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-color);">RS</div>
+                                <div>
+                                    <div style="font-weight: 600;">Rajesh Sharma</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">rajesh.sharma@email.com</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-sm) 0; border-bottom: 1px solid var(--gray-200);">
+                                <div style="width: 40px; height: 40px; background-color: var(--success-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--success-color);">AP</div>
+                                <div>
+                                    <div style="font-weight: 600;">Anita Patel</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">anita.patel@email.com</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-sm) 0; border-bottom: 1px solid var(--gray-200);">
+                                <div style="width: 40px; height: 40px; background-color: var(--warning-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--warning-color);">MK</div>
+                                <div>
+                                    <div style="font-weight: 600;">Mohan Kumar</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">mohan.kumar@email.com</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-sm) 0; border-bottom: 1px solid var(--gray-200);">
+                                <div style="width: 40px; height: 40px; background-color: var(--info-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--info-color);">SG</div>
+                                <div>
+                                    <div style="font-weight: 600;">Sanjay Gupta</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">sanjay.gupta@email.com</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: var(--spacing-md); padding: var(--spacing-sm) 0;">
+                                <div style="width: 40px; height: 40px; background-color: var(--error-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--error-color);">NV</div>
+                                <div>
+                                    <div style="font-weight: 600;">Neha Verma</div>
+                                    <div style="font-size: var(--font-size-sm); color: var(--gray-500);">neha.verma@email.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p class="footer-copyright">&copy; 2024 RailBook Admin Panel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

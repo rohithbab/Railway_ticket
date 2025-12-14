@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - RailBook</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="dashboard.html" class="logo">
+                <div class="logo-icon">R</div>
+                RailBook
+            </a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="dashboard.html" class="nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Dashboard</span>
+                    </a></li>
+                    <li><a href="train-search.html" class="nav-link">
+                        <span class="icon">🔍</span>
+                        <span>Book Ticket</span>
+                    </a></li>
+                    <li><a href="my-bookings.html" class="nav-link">
+                        <span class="icon">🎫</span>
+                        <span>My Bookings</span>
+                    </a></li>
+                </ul>
+                <a href="profile.html" class="profile-icon" title="My Profile" style="border-color: var(--primary-color); background-color: var(--primary-color); color: var(--white);">👤</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container container-md">
+            <!-- Page Header -->
+            <div class="page-header" style="text-align: center;">
+                <h1>My Profile</h1>
+                <p>View your account information</p>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="profile-section">
+                <div class="profile-header">
+                    <div class="profile-avatar">👤</div>
+                    <h2>John Doe</h2>
+                    <p>Member since January 2024</p>
+                </div>
+                <div class="profile-body">
+                    <div class="profile-info-grid">
+                        <div class="profile-info-item">
+                            <div class="profile-info-icon">👤</div>
+                            <div class="profile-info-content">
+                                <label>Full Name</label>
+                                <span>John Doe</span>
+                            </div>
+                        </div>
+                        <div class="profile-info-item">
+                            <div class="profile-info-icon">📧</div>
+                            <div class="profile-info-content">
+                                <label>Email Address</label>
+                                <span>john.doe@email.com</span>
+                            </div>
+                        </div>
+                        <div class="profile-info-item">
+                            <div class="profile-info-icon">📞</div>
+                            <div class="profile-info-content">
+                                <label>Phone Number</label>
+                                <span>+91 98765 43210</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account Stats -->
+            <div style="margin-top: var(--spacing-2xl);">
+                <h3 style="margin-bottom: var(--spacing-lg);">Account Statistics</h3>
+                <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="stat-card">
+                        <div class="stat-icon primary">🎫</div>
+                        <div class="stat-content">
+                            <h3>12</h3>
+                            <p>Total Bookings</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon success">✓</div>
+                        <div class="stat-content">
+                            <h3>10</h3>
+                            <p>Completed Trips</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon info">💰</div>
+                        <div class="stat-content">
+                            <h3>₹15,420</h3>
+                            <p>Total Spent</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon warning">⭐</div>
+                        <div class="stat-content">
+                            <h3>Gold</h3>
+                            <p>Member Status</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div style="margin-top: var(--spacing-2xl);">
+                <h3 style="margin-bottom: var(--spacing-lg);">Quick Actions</h3>
+                <div class="actions-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <a href="train-search.html" class="action-card">
+                        <div class="action-icon">🚂</div>
+                        <h4>Book New Ticket</h4>
+                        <p>Search and book train tickets</p>
+                    </a>
+                    <a href="my-bookings.html" class="action-card">
+                        <div class="action-icon">📋</div>
+                        <h4>View Bookings</h4>
+                        <p>Check your booking history</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Logout Button -->
+            <div style="margin-top: var(--spacing-2xl); text-align: center;">
+                <a href="index.html" class="btn btn-secondary btn-lg">
+                    Logout
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RailBook</h4>
+                    <p>Your trusted partner for railway ticket booking. We make train travel simple and convenient.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="dashboard.html" class="footer-link">Dashboard</a>
+                        <a href="train-search.html" class="footer-link">Book Ticket</a>
+                        <a href="my-bookings.html" class="footer-link">My Bookings</a>
+                        <a href="profile.html" class="footer-link">Profile</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">FAQs</a>
+                        <a href="#" class="footer-link">Terms of Service</a>
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span class="icon">📧</span>
+                            <span>support@railbook.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📞</span>
+                            <span>1800-XXX-XXXX</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="icon">📍</span>
+                            <span>New Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 RailBook. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">in</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

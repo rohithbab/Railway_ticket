@@ -1,0 +1,131 @@
+{
+  "project_name": "Railway Ticket Booking Web Application (Frontend Only)",
+  "project_type": "Frontend web application for training interns",
+  "tech_stack": {
+    "frontend": ["HTML5", "CSS3"],
+    "javascript": "Optional and minimal (only for page navigation simulation)",
+    "backend": "Not required",
+    "database": "Not required"
+  },
+  "project_guidelines": {
+    "data_handling": "Use static and hardcoded data only",
+    "design_style": "Minimal, professional, light theme",
+    "css_approach": "Plain CSS without frameworks",
+    "layout_techniques": ["Flexbox", "basic grid"],
+    "focus": "UI structure, page flow, and layout clarity"
+  },
+  "user_roles": {
+    "user": {
+      "description": "Passenger who books railway tickets",
+      "pages": [
+        "Login Page",
+        "User Dashboard",
+        "Train Search Page",
+        "Train List Page",
+        "Train Details Page",
+        "Passenger Details Page",
+        "Payment Page (Static)",
+        "Booking Confirmation Page"
+      ]
+    },
+    "admin": {
+      "description": "Admin who views booking statistics",
+      "pages": [
+        "Admin Login Page",
+        "Admin Dashboard",
+        "Admin Analytics Page"
+      ]
+    }
+  },
+  "user_pages_specification": {
+    "login_page": {
+      "inputs": ["Username or Email", "Password"],
+      "actions": ["Login button"],
+      "notes": "No real authentication logic required"
+    },
+    "dashboard_page": {
+      "components": ["Header", "Navigation menu", "Welcome message"],
+      "navigation_links": ["Book Ticket", "My Bookings", "Logout"]
+    },
+    "train_search_page": {
+      "inputs": ["From station", "To station", "Travel date"],
+      "action": "Search button",
+      "data_source": "Static station list"
+    },
+    "train_list_page": {
+      "display_type": "Cards or table",
+      "train_details": [
+        "Train name",
+        "Train number",
+        "Departure time",
+        "Arrival time",
+        "Seat availability",
+        "Book Now button"
+      ]
+    },
+    "train_details_page": {
+      "sections": [
+        "Train information",
+        "Journey date",
+        "Available classes",
+        "Seat availability",
+        "Fare details"
+      ],
+      "action": "Proceed to booking"
+    },
+    "passenger_details_page": {
+      "inputs": ["Passenger name", "Age", "Gender", "Seat preference"],
+      "action": "Continue to payment"
+    },
+    "payment_page": {
+      "type": "Static checkout page",
+      "components": [
+        "Booking summary",
+        "Payment options (UI only)",
+        "Pay button"
+      ]
+    },
+    "confirmation_page": {
+      "content": [
+        "Booking success message",
+        "Static Booking ID / PNR",
+        "Passenger details",
+        "Train details"
+      ]
+    }
+  },
+  "admin_pages_specification": {
+    "admin_login_page": {
+      "inputs": ["Admin username", "Password"],
+      "notes": "No real authentication"
+    },
+    "admin_dashboard": {
+      "cards": [
+        "Total users",
+        "Total tickets booked",
+        "Bookings today"
+      ]
+    },
+    "admin_analytics_page": {
+      "display_type": "Table",
+      "columns": [
+        "Train name",
+        "Journey date",
+        "Number of tickets booked"
+      ]
+    }
+  },
+  "non_functional_requirements": {
+    "responsiveness": "Desktop-first, mobile-friendly",
+    "usability": "Clean UI with proper spacing",
+    "consistency": "Same header, footer, and button styles across pages"
+  },
+  "explicit_exclusions": [
+    "Backend APIs",
+    "Database integration",
+    "Real payment gateway",
+    "Seat locking logic",
+    "Security implementation"
+  ],
+  "expected_outcome": "A complete front-end railway ticket booking UI demonstrating real-world application flow using only HTML and CSS"
+}
